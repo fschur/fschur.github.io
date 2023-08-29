@@ -16,19 +16,7 @@
     },
     "profiles": []
   },
-  "work": [
-    {
-      "name": "Seminar for Statistics, ETH Zurich, Zurich, Switzerland",
-      "position": "PhD student",
-      "url": "https://math.ethz.ch/sfs",
-      "startDate": "2023-01-05",
-      "endDate": "2026-01-05",
-      "summary": "Supervisor: Jonas Peters",
-      "highlights": [
-        "Machine Learning, Statistics, Cusality"
-      ]
-    }
-  ],
+  "work": [],
   "volunteer": [],
   "education": [
     {
