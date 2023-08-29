@@ -21,6 +21,6 @@ social: true  # includes social icons at the bottom of the page
 
 I am a PhD student in Statistics at ETH Zurich under the supervision of [Jonas Peters](https://people.math.ethz.ch/~jopeters/). My research interests lie in the intersection of machine learning and statistics. I am particularly focused on causality and reinforcement learning.
 
-I completed my M.Sc. at ETH Zurich, under the supervision of [Andreas Krause](https://las.inf.ethz.ch/krausea) and [Peter Bühlmann](https://stat.ethz.ch/~buhlmann/). I conducted my master's thesis on the topic of Lifelong Meta-Learning for Bayesian Optimization, which earned me the [ETH Medal](https://ethz.ch/en/the-eth-zurich/education/awards/eth-medal.html) in recognition of my research.
+I completed my M.Sc. at ETH Zurich, under the supervision of [Andreas Krause](https://las.inf.ethz.ch/krausea) and [Peter Bühlmann](https://stat.ethz.ch/~buhlmann/). I wrote my master's thesis on the topic of Lifelong Meta-Learning for Bayesian Optimization, which earned me the [ETH Medal](https://ethz.ch/en/the-eth-zurich/education/awards/eth-medal.html) in recognition of my research.
 
 **Contact:** felix.schur [at] stat.math.ethz.ch 
