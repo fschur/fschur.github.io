@@ -6,7 +6,7 @@ subtitle: PhD student in Statistics at ETH Zurich, Seminar for Statistics.
 
 profile:
   align: right
-  image: foto-modified.png
+  image: foto-modified_2.png
   image_circular: false # crops the image to make it circular
   address: #>
     #<p>555 your office number</p>
