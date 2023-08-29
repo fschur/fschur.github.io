@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD student in Statistics at the [Seminar](https://math.ethz.ch/sfs) [Seminar for Statistics, ETH Zurich.](https://math.ethz.ch/sfs).
+subtitle: PhD student in Statistics at the [Seminar for Statistics, ETH Zurich](https://math.ethz.ch/sfs).
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: photo-modified.png
   image_circular: false # crops the image to make it circular
   address: #>
     #<p>555 your office number</p>
