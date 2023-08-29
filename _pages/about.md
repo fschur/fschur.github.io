@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD student in Statistics at the [Seminar for Statistics, ETH Zurich](https://math.ethz.ch/sfs).
+subtitle: PhD student in Statistics at the Seminar for Statistics, ETH Zurich.
 
 profile:
   align: right
@@ -19,6 +19,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a PhD student in Statistics at ETH Zurich under the supervision of [Jonas Peters](https://people.math.ethz.ch/~jopeters/). I work on statistics and machine learning. i am particullary interested in Causality and Reinforcement Learning.
+I am a PhD student in Statistics at ETH Zurich under the supervision of [Jonas Peters](https://people.math.ethz.ch/~jopeters/). My research interests lie in the intersection of machine learning and statistics. I am particularly focused on causality and reinforcement learning.
 
-I completed my M.Sc. at ETH Zurich, under the supervision of [Andreas Krause](https://las.inf.ethz.ch/krausea) and [Peter Bühlmann](https://stat.ethz.ch/~buhlmann/). The topic for my thesis was Lifelong Meta-Learning for Bayesian Optimization and I received the [ETH Medal](https://ethz.ch/en/the-eth-zurich/education/awards/eth-medal.html).
+I completed my M.Sc. at ETH Zurich, under the supervision of [Andreas Krause](https://las.inf.ethz.ch/krausea) and [Peter Bühlmann](https://stat.ethz.ch/~buhlmann/). The topic for my thesis was Lifelong Meta-Learning for Bayesian Optimization and I received the [ETH Medal](https://ethz.ch/en/the-eth-zurich/education/awards/eth-medal.html) for this work.
