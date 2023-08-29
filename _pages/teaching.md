@@ -7,6 +7,12 @@ nav: true
 nav_order: 5
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+##Teaching
+Overview of courses.
 
-Organize your courses by years, topics, or universities, however you like!
+#Causality
+In statistics, we are used to search for the best predictors of some random variable. In many situations, however, we are interested in predicting a system's behavior under manipulations. For such an analysis, we require knowledge about the underlying causal structure of the system. In this course, we study concepts and theory behind causal inference.
+
+**Head Teaching Assistant:** Fall 2023
+
+
