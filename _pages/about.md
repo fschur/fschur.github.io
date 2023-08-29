@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: PhD student in Statistics at the [Seminar for Statistics, ETH Zurich.](https://math.ethz.ch/sfs).
 
 profile:
   align: right
@@ -18,6 +18,12 @@ latest_posts: true  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
+
+I am a PhD student in Statistics at ETH Zurich under the supervision of [Jonas Peters](https://people.math.ethz.ch/~jopeters/). I work on statistics and machine learning. i am particullary interested in Causality and Reinforcement Learning.
+
+I completed my M.Sc. at ETH Zurich, under the supervision of [Andreas Krause](https://las.inf.ethz.ch/krausea) and [Peter Buhlmann](https://stat.ethz.ch/~buhlmann/). The topic for my thesis was Lifelong Meta-Learning for Bayesian Optimization and I received the [ETH Medal](https://ethz.ch/en/the-eth-zurich/education/awards/eth-medal.html).
+
+Before, I worked as a masters student at the [ETH Institute for Machine Learning](https://ml.inf.ethz.ch/) under the supervision of Andreas Krause.
 
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
