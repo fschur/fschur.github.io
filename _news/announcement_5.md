@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Teaching a short Course on Causal Inference at HU Berlin together with Jonas Peters.
+Assuming the role of Group Coordinator for the Seminar on Statistics, succeeding Christoph Schultheiss.
