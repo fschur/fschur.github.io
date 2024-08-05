@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Teaching a Short Course on Causal Inference at HU Berlin together with Jonas Peters.
+Teaching a short Course on Causal Inference at HU Berlin together with Jonas Peters.
