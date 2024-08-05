@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Assuming the role of Group Coordinator for the Seminar on Statistics, succeeding Christoph Schultheiss.
+Assuming the role of group coordinator for the Seminar on Statistics, succeeding Christoph Schultheiss.
