@@ -1,6 +1,15 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"arXiv":
+  url: https://arxiv.org/
+  color: "#b31b1b"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"UAI":
+  url: https://www.auai.org/
+  color: "#1f5faf"
+
+"JRSSB":
+  url: https://academic.oup.com/jrsssb
+  color: "#0d3b66"
+
+"NeurIPS":
+  url: https://neurips.cc/
+  color: "#3b0a54"
