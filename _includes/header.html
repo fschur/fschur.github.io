@@ -84,9 +84,13 @@
                 </div>
               </li>
               {%- else %}
-              <li class="nav-item {% if page.title == p.title %}active{% endif %}">
-                <a class="nav-link" href="{{ p.url | relative_url }}">{{ p.title }}
-                  {%- if page.title == p.title -%}
+              {%- assign nav_link_href = p.url | relative_url -%}
+              {%- if p.nav_href -%}
+                {%- assign nav_link_href = p.nav_href | relative_url -%}
+              {%- endif -%}
+              <li class="nav-item {% if page.title == p.title and p.nav_href == nil %}active{% endif %}">
+                <a class="nav-link" href="{{ nav_link_href }}"{% if p.nav_target %} target="{{ p.nav_target }}" rel="noopener noreferrer"{% endif %}{% if p.nav_download %} download{% endif %}>{{ p.title }}
+                  {%- if page.title == p.title and p.nav_href == nil -%}
                   <span class="sr-only">(current)</span>
                   {%- endif -%}
                 </a>
