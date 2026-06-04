@@ -1,12 +1,8 @@
 ---
-layout: cv
-permalink: /cv/
-title: CV
+title: cv
 nav: true
 nav_order: 5
-cv_pdf: /assets/pdf/cv_felix_schur.pdf # you can also use external links here
-cv_format: rendercv # options: rendercv, jsonresume
-description: Curriculum vitae. Use the button above to download the PDF version.
-toc:
-  sidebar: left
+# Make the navbar "cv" entry link straight to the PDF instead of a CV page.
+# The theme links external (://) permalinks directly, so no /cv/ page is generated.
+permalink: https://fschur.github.io/assets/pdf/cv_felix_schur.pdf
 ---
