@@ -9,10 +9,9 @@
     author={Schur, Felix and Pfister, Niklas and Ding, Peng and Mukherjee, Sach and Peters, Jonas},
     booktitle={International Conference on Machine Learning (ICML)},
     year={2026},
+    abstract={We study the problem of estimating causal effects under hidden confounding in the following unpaired data setting: we observe some covariates and an outcome under different experimental conditions (environments) but do not observe them jointly---we either observe the covariates or the outcome. Under appropriate regularity conditions, the problem can be cast as an instrumental variable (IV) regression with the environment acting as a (possibly high-dimensional) instrument. When there are many environments but only a few observations per environment, standard two-sample IV estimators fail to be consistent. We propose a GMM-type estimator (SplitUP) based on cross-fold sample splitting of the instrument--covariate sample and prove that it is consistent as the number of environments grows but the sample size per environment remains constant. We further extend the method to sparse causal effects via L1-regularized estimation and post-selection refitting.},
+    html={https://icml.cc/Conferences/2026},
     eprint={2601.15254},
-    archivePrefix={arXiv},
-    url={https://arxiv.org/abs/2601.15254},
-    html={https://arxiv.org/abs/2601.15254},
     dimensions={true}
 }
 
@@ -23,6 +22,8 @@
     author={Schur, Felix and Lago, Jesus and Fiez, Tanner},
     booktitle={42nd Conference on Uncertainty in Artificial Intelligence (UAI)},
     year={2026},
+    abstract={We study stochastic bandits in which observing a reward is optional but incurs an action-dependent cost. This setting captures applications where feedback acquisition (e.g., human evaluation or randomized testing) is expensive, and the learner must trade off exploration, exploitation, and observation cost. We formulate regret to include both reward loss and the cumulative cost of requested observations. Our first result is structural: for minimizing regret, it is without loss of generality to consider two-phase policies that first request observations during an exploration phase and then commit to a single action without further observations. Building on this reduction, we introduce two cost-sensitive complexity measures that extend maximum information gain: a cost-adjusted information gain for minimax analysis, and a cost- and gap-adjusted information gain for instance-dependent analysis. Using these quantities, we develop two Gaussian-process-based algorithms, C3-GP and GP-C-LUCB, and derive regret upper bounds for correlated-action settings with heterogeneous (i.e., action-dependent) observation costs. In the finite independent-action setting, we further prove matching lower and upper bounds (up to constants/logarithmic factors), yielding a tight characterization of both minimax and instance-dependent regret in terms of the proposed cost-aware complexity measures.},
+    html={https://www.auai.org/uai2026/}
 }
 
 @inproceedings{schur2026latentactions,
@@ -32,10 +33,9 @@
     author={Schur, Felix},
     booktitle={ICML Workshop on Demos (DEMO)},
     year={2026},
+    abstract={Can latent actions and environment dynamics be recovered from offline trajectories when actions are never observed? We study this question in a setting where trajectories are action-free but tagged with demonstrator identity. We assume that each demonstrator follows a distinct policy, while the environment dynamics are shared across demonstrators and identity affects the next observation only through the chosen action. Under these assumptions, the conditional next-observation distribution is a mixture of latent action-conditioned transition kernels with demonstrator-specific mixing weights. We show that this induces, for each state, a column-stochastic nonnegative matrix factorization of the observable conditional distribution. Using sufficiently scattered policy diversity and rank conditions, we prove that the latent transitions and demonstrator policies are identifiable up to permutation of the latent action labels. We extend the result to continuous observation spaces via a Gram-determinant minimum-volume criterion, and show that continuity of the transition map over a connected state space upgrades local permutation ambiguities to a single global permutation. A small amount of labeled action data then suffices to fix this final ambiguity. These results establish demonstrator diversity as a principled source of identifiability for learning latent actions and dynamics from offline RL data.},
+    html={https://openreview.net/group?id=ICML.cc%2F2026%2FWorkshop%2FDEMO},
     eprint={2603.17577},
-    archivePrefix={arXiv},
-    url={https://arxiv.org/abs/2603.17577},
-    html={https://arxiv.org/abs/2603.17577},
     dimensions={true}
 }
 
@@ -46,10 +46,9 @@
     author={Iglesias-Alonso, Myrl and Schur, Felix and von K{\"u}gelgen, Julius and Peters, Jonas},
     booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
     year={2025},
+    abstract={We consider the problem of estimating a causal effect in a multi-domain setting. The causal effect of interest is confounded by an unobserved confounder and can change between the different domains. We assume that we have access to a proxy of the hidden confounder and that all variables are discrete or categorical. We propose methodology to estimate the causal effect in the target domain, where we assume to observe only the proxy variable. Under these conditions, we prove identifiability (even when treatment and response variables are continuous). We introduce two estimation techniques, prove consistency, and derive confidence intervals. The theoretical results are supported by simulation studies and a real-world example studying the causal effect of website rankings on consumer choices.},
+    html={https://openreview.net/forum?id=8owMKkQIy0},
     eprint={2510.25924},
-    archivePrefix={arXiv},
-    url={https://arxiv.org/abs/2510.25924},
-    html={https://arxiv.org/abs/2510.25924},
     dimensions={true}
 }
 
@@ -61,10 +60,8 @@
     abstract={Causal inference on time series data is a challenging problem, especially in the presence of unobserved confounders. This work focuses on estimating the causal effect between two time series, which are confounded by a third, unobserved time series. Assuming spectral sparsity of the confounder, we show how in the frequency domain this problem can be framed as an adversarial outlier problem. We introduce Deconfounding by Robust regression (DecoR), a novel approach that estimates the causal effect using robust linear regression in the frequency domain. Considering two different robust regression techniques, we first improve existing bounds on the estimation error for such techniques. Crucially, our results do not require distributional assumptions on the covariates. We can therefore use them in time series settings. Applying these results to DecoR, we prove, under suitable assumptions, upper bounds for the estimation error of DecoR that imply consistency. We show DecoR's effectiveness through experiments on synthetic data. Our experiments furthermore suggest that our method is robust with respect to model misspecification.},
     journal={Journal of the Royal Statistical Society Series B: Statistical Methodology},
     year={2025},
-    eprint={2406.07005},
-    archivePrefix={arXiv},
-    url={https://arxiv.org/abs/2406.07005},
-    html={https://arxiv.org/abs/2406.07005},
+    doi={10.1093/jrsssb/qkaf067},
+    html={https://doi.org/10.1093/jrsssb/qkaf067},
     dimensions={true}
 }
 
@@ -78,7 +75,6 @@
     eprint={2409.15530},
     archivePrefix={arXiv},
     primaryClass={econ.EM},
-    url={https://arxiv.org/abs/2409.15530},
     html={https://arxiv.org/abs/2409.15530},
     dimensions={true}
 }
@@ -94,7 +90,6 @@
   year={2023},
   month={August},
   organization={PMLR},
-  url={https://proceedings.mlr.press/v216/schur23a/schur23a.pdf},
-  html={https://proceedings.mlr.press/v216/schur23a/schur23a.pdf},
+  html={https://proceedings.mlr.press/v216/schur23a/schur23a.html},
   dimensions={true}
 }
