@@ -1,32 +1,63 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Felix Schur
-    - name: Languages
-      value: English, German
+cv:
+  name: Felix Schur
+  label: PhD Student in Statistics
+  email: felix.schur@stat.math.ethz.ch
+  location: Zurich, Switzerland
+  image: ""
+  summary: >
+    PhD student in Statistics at ETH Zurich (Seminar for Statistics), working at
+    the intersection of Machine Learning and Statistics, with a focus on Causality
+    and Reinforcement Learning.
 
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD
-      institution: Seminar for Statistics, ETH Zurich, Zurich, Switzerland
-      year: 2023 - present
-      description:
-        - Supervised by Jonas Peters
-    - title: MSc
-      institution: ETH Zurich, Zurich, Switzerland
-      year: 2020-2023
-    - title: Exchange Semester
-      institution: University of Waterloo, Waterloo, Canada
-      year: 2019
-    - title: BSc
-      institution: ETH Zurich, Zurich, Switzerland
-      year: 2016-2019
+  social_networks:
+    - network: GitHub
+      username: fschur
+    - network: LinkedIn
+      username: felix-schur
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 2023
-      items: 
-        - ETH Medal
+  sections:
+    Education:
+      - institution: ETH Zurich, Seminar for Statistics
+        location: Zurich, Switzerland
+        url: https://stat.ethz.ch/
+        area: Statistics
+        studyType: PhD
+        start_date: 2023
+        end_date: present
+        highlights:
+          - Supervised by Jonas Peters and co-supervised by Andreas Krause.
+          - Group coordinator for the Seminar for Statistics.
+
+      - institution: ETH Zurich
+        location: Zurich, Switzerland
+        studyType: MSc
+        start_date: 2020
+        end_date: 2023
+        highlights:
+          - Master's thesis on Lifelong Meta-Learning for Bayesian Optimization, supervised by Andreas Krause and Peter Bühlmann.
+          - Awarded the ETH Medal in recognition of the thesis.
+
+      - institution: University of Waterloo
+        location: Waterloo, Canada
+        studyType: Exchange Semester
+        start_date: 2019
+        end_date: 2019
+
+      - institution: ETH Zurich
+        location: Zurich, Switzerland
+        studyType: BSc
+        start_date: 2016
+        end_date: 2019
+
+    Awards:
+      - title: ETH Medal
+        date: 2023
+        awarder: ETH Zurich
+        summary: Awarded for an outstanding master's thesis.
+
+    Languages:
+      - name: German
+        summary: "Native speaker"
+
+      - name: English
+        summary: "Fluent"
