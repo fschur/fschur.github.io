@@ -7,11 +7,11 @@ overrides:
     upstream_path: _includes/footer.liquid
     upstream_sha256: 65219faad5445eb4456649d77921acd07845875bbcad4fb8f33b12b3d52d96d2
     local_sha256: c1bce085fc8cf19b1bb7f6329e8d74ad4ea3ac0720fdb2182981e13105e369c2
-    acknowledged_at: '2026-06-04'
+    acknowledged_at: "2026-06-04"
   _layouts/bib.liquid:
     owner: al_folio_core
     gem_version: 1.0.10
     upstream_path: _layouts/bib.liquid
     upstream_sha256: 430311d9b94adf6fb1c2fab7609f6e726efc98e2b50e7b1c4cde0ad654c04506
     local_sha256: d892b06153b3441441022114079b3ad7f4bda3c48879d29c69c3bfa618d60ded
-    acknowledged_at: '2026-06-04'
+    acknowledged_at: "2026-06-04"

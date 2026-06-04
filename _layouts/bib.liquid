@@ -7,9 +7,9 @@
         {%- if entry.abbr -%}{{ entry.abbr }}|{%- endif -%}
         {%- if entry.abbr2 -%}{{ entry.abbr2 }}{%- endif -%}
       {%- endcapture -%}
-      {%- assign badges = badge_list | split: "|" -%}
+      {%- assign badges = badge_list | split: '|' -%}
       {%- for badge in badges -%}
-        {%- if badge != "" -%}
+        {%- if badge != '' -%}
           {%- if site.data.venues[badge] -%}
             {% assign venue_style = null %}
             {% if site.data.venues[badge].color != blank %}
