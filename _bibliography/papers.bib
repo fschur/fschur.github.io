@@ -55,7 +55,7 @@
 @article{schur2025decor,
     bibtex_show={true},
     abbr={JRSSB},
-    title={DecoR: deconfounding time series with robust regression},
+    title={DecoR: Deconfounding Time Series with Robust Regression},
     author={Schur, Felix and Blieske, Pio and Peters, Jonas},
     abstract={Causal inference on time series data is a challenging problem, especially in the presence of unobserved confounders. In this work, we focus on estimating the causal effect of a multivariate time series on a univariate time series when a third (possibly multivariate) time series confounds the relationship but remains unobserved. By assuming spectral sparsity of the confounder, we show how this problem can be framed as an adversarial outlier problem in the frequency domain. We introduce Deconfounding by Robust regression (DecoR), a novel approach that estimates the causal effect using robust linear regression in the frequency domain. We consider two robust regression techniques and provide improved bounds on their estimation errors. Applying these results to DecoR, we prove, under suitable assumptions, upper bounds for the estimation error of DecoR that imply consistency. We demonstrate DecoR's effectiveness through experiments on both synthetic and real-world data from Earth system science. The simulation experiments furthermore suggest that DecoR is robust with respect to model misspecification.},
     journal={Journal of the Royal Statistical Society Series B: Statistical Methodology},
@@ -78,15 +78,16 @@
 }
 
 @inproceedings{schur23a,
-    bibtex_show={true},
-    abbr={UAI},
-    title={Lifelong bandit optimization: no prior and no regret},
-    author={Schur, Felix and Kassraie, Parnian and Rothfuss, Jonas and Krause, Andreas},
-    abstract={Machine learning algorithms are often repeatedly applied to problems with similar structure over and over again. We focus on solving a sequence of bandit optimization tasks and develop LIBO, an algorithm which adapts to the environment by learning from past experience and becomes more sample-efficient in the process. We assume a kernelized structure where the kernel is unknown but shared across all tasks. LIBO sequentially meta-learns a kernel that approximates the true kernel and solves the incoming tasks with the latest kernel estimate. Our algorithm can be paired with any kernelized or linear bandit algorithm and guarantees oracle optimal performance, meaning that as more tasks are solved, the regret of LIBO on each task converges to the regret of the bandit algorithm with oracle knowledge of the true kernel. Naturally, if paired with a sublinear bandit algorithm, LIBO yields a sublinear lifelong regret. We also show that direct access to the data from each task is not necessary for attaining sublinear regret. We propose F-LIBO, which solves the lifelong problem in a federated manner.},
-    booktitle={Proceedings of the Thirty-Ninth Conference on Uncertainty in Artificial Intelligence},
-    pages={1847--1857},
-    year={2023},
-    publisher={PMLR},
-    html={https://proceedings.mlr.press/v216/schur23a},
-    dimensions={true}
+  bibtex_show={true},
+  abbr={UAI},
+  title={Lifelong Bandit Optimization: No Prior and No Regret},
+  author={Schur, Felix and Kassraie, Parnian and Rothfuss, Jonas and Krause, Andreas},
+  abstract={Machine learning algorithms are often repeatedly applied to problems with similar structure over and over again. We focus on solving a sequence of bandit optimization tasks and develop LIBO, an algorithm which adapts to the environment by learning from past experience and becomes more sample-efficient in the process. We assume a kernelized structure where the kernel is unknown but shared across all tasks. LIBO sequentially meta-learns a kernel that approximates the true kernel and solves the incoming tasks with the latest kernel estimate. Our algorithm can be paired with any kernelized or linear bandit algorithm and guarantees oracle optimal performance, meaning that as more tasks are solved, the regret of LIBO on each task converges to the regret of the bandit algorithm with oracle knowledge of the true kernel. Naturally, if paired with a sublinear bandit algorithm, LIBO yields a sublinear lifelong regret. We also show that direct access to the data from each task is not necessary for attaining sublinear regret. We propose F-LIBO, which solves the lifelong problem in a federated manner.},
+  booktitle={Proceedings of the 39th Conference on Uncertainty in Artificial Intelligence (UAI)},
+  pages={1847--1857},
+  year={2023},
+  month={August},
+  publisher={PMLR},
+  html={https://proceedings.mlr.press/v216/schur23a},
+  dimensions={true}
 }
