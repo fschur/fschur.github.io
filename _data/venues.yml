@@ -18,10 +18,10 @@
   url: https://icml.cc/
   color: "#4B8B3B"
 
-"ICML-S":
+"Spotlight":
   url: https://icml.cc/
-  color: "#2E6B2E"
+  color: "#C9A227"
 
-"DEMO":
+"ICML Workshop":
   url: https://icml.cc/
   color: "#5C6BC0"
