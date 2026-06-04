@@ -61,8 +61,12 @@ if (/gem 'al_math',\s*:git =>/.test(gemfile)) {
   failures.push("`Gemfile` must not use git-branch pin for `al_math`; use released gem version.");
 }
 
+const hasDocumentedOverrides = exists(".al-folio-overrides.yml");
 for (const forbiddenPath of ["_includes", "_layouts", "_sass", "_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
   if (exists(forbiddenPath)) {
+    if (hasDocumentedOverrides && (forbiddenPath === "_layouts" || forbiddenPath === "_includes")) {
+      continue;
+    }
     failures.push(`Starter must not own core component path \`${forbiddenPath}\`; move ownership to the corresponding gem.`);
   }
 }

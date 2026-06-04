@@ -3,8 +3,35 @@
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
-      {% include venue_badge.liquid badge=entry.abbr %}
-      {% include venue_badge.liquid badge=entry.abbr2 %}
+      {%- capture badge_list -%}
+        {%- if entry.abbr -%}{{ entry.abbr }}|{%- endif -%}
+        {%- if entry.abbr2 -%}{{ entry.abbr2 }}{%- endif -%}
+      {%- endcapture -%}
+      {%- assign badges = badge_list | split: "|" -%}
+      {%- for badge in badges -%}
+        {%- if badge != "" -%}
+          {%- if site.data.venues[badge] -%}
+            {% assign venue_style = null %}
+            {% if site.data.venues[badge].color != blank %}
+              {% assign venue_style = site.data.venues[badge].color | prepend: 'style="background-color:' | append: '"' %}
+            {%- endif -%}
+            <abbr
+              class="badge rounded w-100"
+              {% if venue_style %}
+                {{ venue_style }}
+              {% endif -%}
+            >
+              {% if site.data.venues[badge].url %}
+                <a href="{{ site.data.venues[badge].url }}">{{ badge }}</a>
+              {% else %}
+                <div>{{- badge -}}</div>
+              {% endif %}
+            </abbr>
+          {% else %}
+            <abbr class="badge rounded w-100">{{ badge }}</abbr>
+          {% endif %}
+        {%- endif -%}
+      {%- endfor -%}
       {% if entry.preview %}
         {% if entry.preview contains '://' %}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
