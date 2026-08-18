@@ -1,0 +1,97 @@
+{% assign paper_url = page.url | replace: 'index.html', '' | absolute_url %}
+{% assign paper_pdf_url = page.paper.pdf_url %}
+{% if paper_pdf_url and paper_pdf_url contains '://' %}
+  {% assign absolute_pdf_url = paper_pdf_url %}
+{% elsif paper_pdf_url %}
+  {% assign absolute_pdf_url = paper_pdf_url | absolute_url %}
+{% endif %}
+
+<!-- Scholarly discovery metadata (Google Scholar and other academic indexes) -->
+<meta name="citation_title" content="{{ page.title | strip_html | escape }}">
+{% for author in page.paper.authors %}
+  <meta name="citation_author" content="{{ author.name | escape }}">
+  {% if author.orcid %}
+    <meta name="citation_author_orcid" content="{{ author.orcid }}">
+  {% endif %}
+{% endfor %}
+<meta name="citation_publication_date" content="{{ page.paper.date }}">
+{% if page.paper.publication_type == 'journal' %}
+  <meta name="citation_journal_title" content="{{ page.paper.venue | escape }}">
+{% else %}
+  <meta name="citation_conference_title" content="{{ page.paper.venue | escape }}">
+{% endif %}
+{% if page.paper.volume %}
+  <meta name="citation_volume" content="{{ page.paper.volume }}">
+{% endif %}
+{% if page.paper.issue %}
+  <meta name="citation_issue" content="{{ page.paper.issue }}">
+{% endif %}
+{% if page.paper.firstpage %}
+  <meta name="citation_firstpage" content="{{ page.paper.firstpage }}">
+{% endif %}
+{% if page.paper.lastpage %}
+  <meta name="citation_lastpage" content="{{ page.paper.lastpage }}">
+{% endif %}
+{% if page.paper.doi %}
+  <meta name="citation_doi" content="{{ page.paper.doi }}">
+{% endif %}
+{% if absolute_pdf_url %}
+  <meta name="citation_pdf_url" content="{{ absolute_pdf_url }}">
+{% endif %}
+<meta name="citation_abstract_html_url" content="{{ paper_url }}">
+<meta name="citation_language" content="en">
+<meta name="citation_keywords" content="{{ page.keywords | escape }}">
+
+<!-- Machine-readable article description -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": {{ page.title | jsonify }},
+    "name": {{ page.title | jsonify }},
+    "description": {{ page.description | jsonify }},
+    "abstract": {{ page.abstract | jsonify }},
+    "url": {{ paper_url | jsonify }},
+    "mainEntityOfPage": {{ paper_url | jsonify }},
+    "datePublished": {{ page.paper.date | jsonify }},
+    "inLanguage": "en",
+    "keywords": {{ page.keywords | jsonify }},
+    "author": [
+      {% for author in page.paper.authors %}
+        {
+          "@type": "Person",
+          "name": {{ author.name | jsonify }}{% if author.orcid %},
+          "sameAs": {{ author.orcid | jsonify }},
+          "identifier": {{ author.orcid | jsonify }}{% endif %}
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ],
+    "isPartOf": {
+      "@type": {% if page.paper.publication_type == 'journal' %}"Periodical"{% else %}"PublicationEvent"{% endif %},
+      "name": {{ page.paper.venue | jsonify }}
+    }{% if page.paper.doi or page.paper.arxiv %},
+    "identifier": [
+      {% if page.paper.doi %}
+        {
+          "@type": "PropertyValue",
+          "propertyID": "DOI",
+          "value": {{ page.paper.doi | jsonify }}
+        }{% if page.paper.arxiv %},{% endif %}
+      {% endif %}
+      {% if page.paper.arxiv %}
+        {
+          "@type": "PropertyValue",
+          "propertyID": "arXiv",
+          "value": {{ page.paper.arxiv | jsonify }}
+        }
+      {% endif %}
+    ]{% endif %}{% if page.paper.external_url %},
+    "sameAs": {{ page.paper.external_url | jsonify }}{% elsif page.paper.arxiv %},
+    "sameAs": {{ page.paper.arxiv | prepend: 'https://arxiv.org/abs/' | jsonify }}{% endif %}{% if absolute_pdf_url %},
+    "encoding": {
+      "@type": "MediaObject",
+      "contentUrl": {{ absolute_pdf_url | jsonify }},
+      "encodingFormat": "application/pdf"
+    }{% endif %}
+  }
+</script>

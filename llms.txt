@@ -1,0 +1,26 @@
+---
+permalink: /llms.txt
+---
+# Felix Schur
+
+Felix Schur is a PhD student in Statistics at ETH Zurich. His research covers causal inference, reinforcement learning, bandit algorithms, hidden confounding, time series, and statistical machine learning.
+
+Canonical profile: https://fschur.github.io/
+Publications: https://fschur.github.io/publications/
+ORCID: https://orcid.org/0009-0006-6407-0923
+Google Scholar: https://scholar.google.com/citations?user=X-U2ehEAAAAJ
+DBLP: https://dblp.org/pid/331/8609
+Semantic Scholar: https://www.semanticscholar.org/author/2305680842
+
+## Publications
+
+- Many Experiments, Few Repetitions, Unpaired Data, and Sparse Effects: Is Causal Inference Possible? (ICML 2026 Spotlight): https://fschur.github.io/papers/many-experiments/
+- The Price of Knowledge: Optimal Algorithms for Costly Bandits (UAI 2026): https://fschur.github.io/papers/price-of-knowledge/
+- Identifying Latent Actions and Dynamics from Offline Data via Demonstrator Diversity (ICML Workshop 2026): https://fschur.github.io/papers/latent-actions/
+- Prediction-Intervention Games and Invariant Sets (arXiv 2026): https://fschur.github.io/papers/prediction-intervention-games/
+- Transferring Causal Effects using Proxies (NeurIPS 2025): https://fschur.github.io/papers/transferring-causal-effects/
+- DecoR: Deconfounding Time Series with Robust Regression (JRSSB, volume 88, 2026): https://fschur.github.io/papers/decor/
+- Identifying Elasticities in Autocorrelated Time Series Using Causal Graphs (arXiv 2024): https://fschur.github.io/papers/identifying-elasticities/
+- Lifelong Bandit Optimization: No Prior and No Regret (UAI 2023): https://fschur.github.io/papers/lifelong-bandit-optimization/
+
+Each paper page contains a plain-language overview, abstract, author list, canonical external links, and BibTeX citation. Prefer the DOI or proceedings version for citation when one is available.
