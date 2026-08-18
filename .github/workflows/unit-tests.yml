@@ -75,12 +75,14 @@ jobs:
           pip3 install --upgrade nbconvert
 
       - name: Run comments integration test 🧪
+        if: ${{ hashFiles('_posts/2022-12-10-giscus-comments.md', '_posts/2015-10-20-disqus-comments.md') != '' }}
         run: bash test/integration_comments.sh
 
       - name: Run plugin toggle integration test 🔌
         run: bash test/integration_plugin_toggles.sh
 
       - name: Run distill integration test 📄
+        if: ${{ hashFiles('_posts/2018-12-22-distill.md') != '' }}
         run: bash test/integration_distill.sh
 
       - name: Run bootstrap compatibility integration test 🧩
