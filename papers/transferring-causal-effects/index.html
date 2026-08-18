@@ -1,0 +1,283 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="google-site-verification" content="nODYcWHxJN0Mm8S_LuVz29-y-THY6V3m9IcCpw_nJk0"> <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Transferring Causal Effects using Proxies | Felix Schur </title> <meta name="author" content="Felix Schur"> <meta name="description" content="A NeurIPS 2025 paper on identifying and estimating target-domain causal effects using a proxy for an unobserved confounder."> <meta name="keywords" content="causal inference, transportability, proxy variables, hidden confounding, multi-domain learning, causal effect estimation"> <meta property="og:site_name" content="Felix Schur"> <meta property="og:type" content="website"> <meta property="og:title" content="Felix Schur | Transferring Causal Effects using Proxies"> <meta property="og:url" content="https://fschur.github.io/papers/transferring-causal-effects/"> <meta property="og:description" content="A NeurIPS 2025 paper on identifying and estimating target-domain causal effects using a proxy for an unobserved confounder."> <meta property="og:image" content="https://fschur.github.io/assets/img/foto_new.png"> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Transferring Causal Effects using Proxies"> <meta name="twitter:description" content="A NeurIPS 2025 paper on identifying and estimating target-domain causal effects using a proxy for an unobserved confounder."> <meta name="twitter:image" content="https://fschur.github.io/assets/img/foto_new.png"> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Felix Schur"
+        },
+        "url": "https://fschur.github.io/papers/transferring-causal-effects/",
+        "@type": "WebSite",
+        "description": "A NeurIPS 2025 paper on identifying and estimating target-domain causal effects using a proxy for an unobserved confounder.",
+        "headline": "Transferring Causal Effects using Proxies",
+        
+        "sameAs": ["https://github.com/fschur","https://www.linkedin.com/in/felix-schur","https://scholar.google.com/citations?user=X-U2ehEAAAAJ","https://orcid.org/0009-0006-6407-0923","https://dblp.org/pid/331/8609","https://www.semanticscholar.org/author/2305680842"],
+        
+        "name": "Felix Schur",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%93%88&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=9278fad11fbb7f97e25b00cf0f4948af"> <link rel="canonical" href="https://fschur.github.io/papers/transferring-causal-effects/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> <meta name="citation_title" content="Transferring Causal Effects using Proxies"> <meta name="citation_author" content="Manuel Iglesias-Alonso"> <meta name="citation_author" content="Felix Schur"> <meta name="citation_author_orcid" content="https://orcid.org/0009-0006-6407-0923"> <meta name="citation_author" content="Julius von Kügelgen"> <meta name="citation_author" content="Jonas Peters"> <meta name="citation_publication_date" content="2025-10-29"> <meta name="citation_conference_title" content="Advances in Neural Information Processing Systems (NeurIPS)"> <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2510.25924"> <meta name="citation_abstract_html_url" content="https://fschur.github.io/papers/transferring-causal-effects/"> <meta name="citation_language" content="en"> <meta name="citation_keywords" content="causal inference, transportability, proxy variables, hidden confounding, multi-domain learning, causal effect estimation"> <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Transferring Causal Effects using Proxies",
+    "name": "Transferring Causal Effects using Proxies",
+    "description": "A NeurIPS 2025 paper on identifying and estimating target-domain causal effects using a proxy for an unobserved confounder.",
+    "abstract": "We consider the problem of estimating a causal effect in a multi-domain setting. The causal effect of interest is confounded by an unobserved confounder and can change between the different domains. We assume that we have access to a proxy of the hidden confounder and that all variables are discrete or categorical. We propose methodology to estimate the causal effect in the target domain, where we assume to observe only the proxy variable. Under these conditions, we prove identifiability, even when treatment and response variables are continuous. We introduce two estimation techniques, prove consistency, and derive confidence intervals. The theoretical results are supported by simulation studies and a real-world example studying the causal effect of website rankings on consumer choices.",
+    "url": "https://fschur.github.io/papers/transferring-causal-effects/",
+    "mainEntityOfPage": "https://fschur.github.io/papers/transferring-causal-effects/",
+    "datePublished": "2025-10-29",
+    "inLanguage": "en",
+    "keywords": "causal inference, transportability, proxy variables, hidden confounding, multi-domain learning, causal effect estimation",
+    "author": [
+      
+        {
+          "@type": "Person",
+          "name": "Manuel Iglesias-Alonso"
+        },
+      
+        {
+          "@type": "Person",
+          "name": "Felix Schur",
+          "sameAs": "https://orcid.org/0009-0006-6407-0923",
+          "identifier": "https://orcid.org/0009-0006-6407-0923"
+        },
+      
+        {
+          "@type": "Person",
+          "name": "Julius von Kügelgen"
+        },
+      
+        {
+          "@type": "Person",
+          "name": "Jonas Peters"
+        }
+      
+    ],
+    "isPartOf": {
+      "@type": "PublicationEvent",
+      "name": "Advances in Neural Information Processing Systems (NeurIPS)"
+    },
+    "identifier": [
+      
+      
+        {
+          "@type": "PropertyValue",
+          "propertyID": "arXiv",
+          "value": "2510.25924"
+        }
+      
+    ],
+    "sameAs": "https://openreview.net/forum?id=8owMKkQIy0",
+    "encoding": {
+      "@type": "MediaObject",
+      "contentUrl": "https://arxiv.org/pdf/2510.25924",
+      "encodingFormat": "application/pdf"
+    }
+  }
+</script> <style>
+      .paper-page {
+        margin: 0 auto;
+        max-width: 800px;
+      }
+
+      .paper-kicker {
+        color: var(--global-theme-color);
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+      }
+
+      .paper-title {
+        font-size: clamp(2rem, 5vw, 3.25rem);
+        line-height: 1.12;
+        margin-bottom: 1rem;
+      }
+
+      .paper-authors {
+        font-size: 1.05rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .paper-venue {
+        color: var(--global-text-color-light);
+        margin-bottom: 1.5rem;
+      }
+
+      .paper-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin: 1.5rem 0 2.5rem;
+      }
+
+      .paper-link {
+        border: 1px solid var(--global-theme-color);
+        border-radius: 0.25rem;
+        color: var(--global-theme-color);
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 0.4rem 0.8rem;
+      }
+
+      .paper-link:hover {
+        background: var(--global-theme-color);
+        color: var(--global-bg-color);
+        text-decoration: none;
+      }
+
+      .paper-page section {
+        margin-top: 2.25rem;
+      }
+
+      .paper-page section h2 {
+        font-size: 1.45rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .paper-page pre {
+        background: var(--global-code-bg-color);
+        border: 1px solid var(--global-divider-color);
+        border-radius: 0.25rem;
+        font-size: 0.82rem;
+        padding: 1rem;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+
+      .paper-note {
+        border-left: 3px solid var(--global-theme-color);
+        color: var(--global-text-color-light);
+        padding-left: 1rem;
+      }
+
+      .paper-back {
+        border-top: 1px solid var(--global-divider-color);
+        margin-top: 3rem;
+        padding-top: 1.25rem;
+      }
+    </style> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Felix</span> Schur </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="https://fschur.github.io/assets/pdf/cv_felix_schur.pdf">cv </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <article class="paper-page"> <header> <p class="paper-kicker">NeurIPS · 2025</p> <h1 class="paper-title">Transferring Causal Effects using Proxies</h1> <p class="paper-authors"> Manuel Iglesias-Alonso, <a href="https://orcid.org/0009-0006-6407-0923" rel="external noopener" target="_blank">Felix Schur</a>, Julius von Kügelgen, Jonas Peters </p> <p class="paper-venue"> Advances in Neural Information Processing Systems (NeurIPS) </p> <nav class="paper-links" aria-label="Paper links"> <a class="paper-link" href="https://openreview.net/forum?id=8owMKkQIy0" rel="external noopener" target="_blank">OpenReview</a> <a class="paper-link" href="https://arxiv.org/abs/2510.25924" rel="external noopener" target="_blank">arXiv</a> <a class="paper-link" href="https://arxiv.org/pdf/2510.25924" rel="external noopener" target="_blank">PDF</a> </nav> </header> <section> <h2>Overview</h2> <p>This paper considers causal-effect estimation across domains when the effect is hidden-confounded and may vary from one domain to another. The target domain contains only a proxy for the confounder; the paper shows how information from other domains can nevertheless identify and estimate the target effect.</p> </section> <section> <h2>What the paper contributes</h2> <ul> <li>Proves identifiability using proxy observations in a multi-domain setting, including extensions with continuous treatment and response variables.</li> <li>Introduces two consistent estimators and derives confidence intervals.</li> <li>Evaluates the methods in simulations and in a study of how website rankings affect consumer choices.</li> </ul> </section> <section> <h2>Abstract</h2> <p>We consider the problem of estimating a causal effect in a multi-domain setting. The causal effect of interest is confounded by an unobserved confounder and can change between the different domains. We assume that we have access to a proxy of the hidden confounder and that all variables are discrete or categorical. We propose methodology to estimate the causal effect in the target domain, where we assume to observe only the proxy variable. Under these conditions, we prove identifiability, even when treatment and response variables are continuous. We introduce two estimation techniques, prove consistency, and derive confidence intervals. The theoretical results are supported by simulation studies and a real-world example studying the causal effect of website rankings on consumer choices.</p> </section> <section> <h2>Citation</h2> <pre><code>@inproceedings{iglesias2025transferring,
+  title     = {Transferring Causal Effects using Proxies},
+  author    = {Iglesias-Alonso, Manuel and Schur, Felix and von Kügelgen, Julius and Peters, Jonas},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2025},
+  eprint    = {2510.25924},
+  archivePrefix = {arXiv}
+}
+</code></pre> </section> <p class="paper-back"><a href="/publications/">← All publications</a></p> </article> </div> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-publications",
+          title: "publications",
+          description: "Research papers and preprints by Felix Schur on causal inference, reinforcement learning, bandit algorithms, time series, and statistical machine learning.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-cv",
+          title: "cv",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/https:/fschur.github.io/assets/pdf/cv_felix_schur.pdf";
+          },
+        },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%66%65%6C%69%78.%73%63%68%75%72@%73%74%61%74.%6D%61%74%68.%65%74%68%7A.%63%68", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/fschur", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/felix-schur", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=X-U2ehEAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0009-0006-6407-0923", "_blank");
+        },
+      },{
+        id: 'social-dblp',
+        title: 'DBLP',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://dblp.org/pid/331/8609", "_blank");
+        },
+      },{
+        id: 'social-semanticscholar',
+        title: 'Semantic Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.semanticscholar.org/author/2305680842", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
