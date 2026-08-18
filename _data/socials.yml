@@ -2,9 +2,6 @@
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 email: felix.schur@stat.math.ethz.ch
-github_username: fschur
 linkedin_username: felix-schur
 scholar_userid: X-U2ehEAAAAJ
-orcid_id: 0009-0006-6407-0923
-dblp_url: https://dblp.org/pid/331/8609
-semanticscholar_id: 2305680842
+github_username: fschur
