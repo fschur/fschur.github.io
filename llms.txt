@@ -14,10 +14,11 @@ Semantic Scholar: https://www.semanticscholar.org/author/2305680842
 
 ## Publications
 
+- Who Caused Y? Learning Causal Parents Using Independent Risk Minimization (NeurIPS 2026): https://fschur.github.io/papers/who-caused-y/
 - Many Experiments, Few Repetitions, Unpaired Data, and Sparse Effects: Is Causal Inference Possible? (ICML 2026 Spotlight): https://fschur.github.io/papers/many-experiments/
 - The Price of Knowledge: Optimal Algorithms for Costly Bandits (UAI 2026): https://fschur.github.io/papers/price-of-knowledge/
-- Identifying Latent Actions and Dynamics from Offline Data via Demonstrator Diversity (ICML Workshop 2026): https://fschur.github.io/papers/latent-actions/
-- Prediction-Intervention Games and Invariant Sets (arXiv 2026): https://fschur.github.io/papers/prediction-intervention-games/
+- Action-Free Offline RL via Demonstrator Diversity (ICML Workshop 2026): https://fschur.github.io/papers/latent-actions/
+- Prediction-Intervention Games and Invariant Sets (NeurIPS 2026): https://fschur.github.io/papers/prediction-intervention-games/
 - Transferring Causal Effects using Proxies (NeurIPS 2025): https://fschur.github.io/papers/transferring-causal-effects/
 - DecoR: Deconfounding Time Series with Robust Regression (JRSSB, volume 88, 2026): https://fschur.github.io/papers/decor/
 - Identifying Elasticities in Autocorrelated Time Series Using Causal Graphs (arXiv 2024): https://fschur.github.io/papers/identifying-elasticities/

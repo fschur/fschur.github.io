@@ -6,12 +6,16 @@ permalink: /papers/price-of-knowledge/
 keywords: "costly bandits, stochastic bandits, Gaussian processes, active learning, information gain, reinforcement learning"
 paper:
   short_venue: UAI
-  venue: 42nd Conference on Uncertainty in Artificial Intelligence (UAI)
+  venue: Proceedings of the 42nd Conference on Uncertainty in Artificial Intelligence (UAI)
   year: 2026
-  date: "2026"
+  date: "2026-08-17"
   publication_type: conference
-  external_url: https://openreview.net/forum?id=PLY9BJ5uB0
-  external_label: OpenReview
+  volume: 337
+  firstpage: 6064
+  lastpage: 6090
+  external_url: https://proceedings.mlr.press/v337/schur26a.html
+  external_label: Proceedings
+  pdf_url: https://raw.githubusercontent.com/mlresearch/v337/main/assets/schur26a/schur26a.pdf
   authors:
     - name: Felix Schur
       orcid: https://orcid.org/0009-0006-6407-0923
@@ -30,7 +34,12 @@ bibtex: |
   @inproceedings{schur2026priceofknowledge,
     title     = {The Price of Knowledge: Optimal Algorithms for Costly Bandits},
     author    = {Schur, Felix and Lago, Jesus and Fiez, Tanner},
-    booktitle = {42nd Conference on Uncertainty in Artificial Intelligence},
-    year      = {2026}
+    booktitle = {Proceedings of the 42nd Conference on Uncertainty in Artificial Intelligence},
+    volume    = {337},
+    series    = {Proceedings of Machine Learning Research},
+    pages     = {6064--6090},
+    publisher = {PMLR},
+    year      = {2026},
+    url       = {https://proceedings.mlr.press/v337/schur26a.html}
   }
 ---
